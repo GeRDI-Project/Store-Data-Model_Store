@@ -1,0 +1,9 @@
+{"namespace": "org.gerdiproject.store.data.model",
+ "type": "record",
+ "name": "StoreDataModel",
+ "fields": [
+     {"name": "name", "type": "string"},
+     {"name": "favorite_number",  "type": ["int", "null"]},
+     {"name": "favorite_color", "type": ["string", "null"]}
+ ]
+}
