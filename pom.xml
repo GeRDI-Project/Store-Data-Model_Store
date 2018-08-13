@@ -14,6 +14,10 @@
     <artifactId>store-data-model</artifactId>
     <version>0.1-SNAPSHOT</version>
 
+    <properties>
+            <cpd.skip>true</cpd.skip>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.avro</groupId>
