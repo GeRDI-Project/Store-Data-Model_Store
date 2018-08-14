@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 4069712565912675407L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"StoreDataModel\",\"namespace\":\"org.gerdiproject.store.data.model\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"favorite_number\",\"type\":[\"int\",\"null\"]},{\"name\":\"favorite_color\",\"type\":[\"string\",\"null\"]}]}");
+  private static final long serialVersionUID = -4467351187421071039L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"StoreDataModel\",\"namespace\":\"org.gerdiproject.store.data.model\",\"fields\":[{\"name\":\"TargetStore\",\"type\":\"string\"},{\"name\":\"User\",\"type\":\"string\"},{\"name\":\"researchDataList\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"ResearchData\",\"fields\":[{\"name\":\"researchDataIdentifier\",\"type\":\"string\"},{\"name\":\"researchDataURL\",\"type\":\"string\"},{\"name\":\"researchDataLabel\",\"type\":\"string\"}]}}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -51,9 +51,9 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence name;
-  @Deprecated public java.lang.Integer favorite_number;
-  @Deprecated public java.lang.CharSequence favorite_color;
+  @Deprecated public java.lang.CharSequence TargetStore;
+  @Deprecated public java.lang.CharSequence User;
+  @Deprecated public java.util.List<org.gerdiproject.store.data.model.ResearchData> researchDataList;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -64,23 +64,23 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
 
   /**
    * All-args constructor.
-   * @param name The new value for name
-   * @param favorite_number The new value for favorite_number
-   * @param favorite_color The new value for favorite_color
+   * @param TargetStore The new value for TargetStore
+   * @param User The new value for User
+   * @param researchDataList The new value for researchDataList
    */
-  public StoreDataModel(java.lang.CharSequence name, java.lang.Integer favorite_number, java.lang.CharSequence favorite_color) {
-    this.name = name;
-    this.favorite_number = favorite_number;
-    this.favorite_color = favorite_color;
+  public StoreDataModel(java.lang.CharSequence TargetStore, java.lang.CharSequence User, java.util.List<org.gerdiproject.store.data.model.ResearchData> researchDataList) {
+    this.TargetStore = TargetStore;
+    this.User = User;
+    this.researchDataList = researchDataList;
   }
 
   public org.apache.avro.Schema getSchema() { return SCHEMA$; }
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return name;
-    case 1: return favorite_number;
-    case 2: return favorite_color;
+    case 0: return TargetStore;
+    case 1: return User;
+    case 2: return researchDataList;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -89,59 +89,59 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: name = (java.lang.CharSequence)value$; break;
-    case 1: favorite_number = (java.lang.Integer)value$; break;
-    case 2: favorite_color = (java.lang.CharSequence)value$; break;
+    case 0: TargetStore = (java.lang.CharSequence)value$; break;
+    case 1: User = (java.lang.CharSequence)value$; break;
+    case 2: researchDataList = (java.util.List<org.gerdiproject.store.data.model.ResearchData>)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
 
   /**
-   * Gets the value of the 'name' field.
-   * @return The value of the 'name' field.
+   * Gets the value of the 'TargetStore' field.
+   * @return The value of the 'TargetStore' field.
    */
-  public java.lang.CharSequence getName() {
-    return name;
+  public java.lang.CharSequence getTargetStore() {
+    return TargetStore;
   }
 
   /**
-   * Sets the value of the 'name' field.
+   * Sets the value of the 'TargetStore' field.
    * @param value the value to set.
    */
-  public void setName(java.lang.CharSequence value) {
-    this.name = value;
+  public void setTargetStore(java.lang.CharSequence value) {
+    this.TargetStore = value;
   }
 
   /**
-   * Gets the value of the 'favorite_number' field.
-   * @return The value of the 'favorite_number' field.
+   * Gets the value of the 'User' field.
+   * @return The value of the 'User' field.
    */
-  public java.lang.Integer getFavoriteNumber() {
-    return favorite_number;
+  public java.lang.CharSequence getUser() {
+    return User;
   }
 
   /**
-   * Sets the value of the 'favorite_number' field.
+   * Sets the value of the 'User' field.
    * @param value the value to set.
    */
-  public void setFavoriteNumber(java.lang.Integer value) {
-    this.favorite_number = value;
+  public void setUser(java.lang.CharSequence value) {
+    this.User = value;
   }
 
   /**
-   * Gets the value of the 'favorite_color' field.
-   * @return The value of the 'favorite_color' field.
+   * Gets the value of the 'researchDataList' field.
+   * @return The value of the 'researchDataList' field.
    */
-  public java.lang.CharSequence getFavoriteColor() {
-    return favorite_color;
+  public java.util.List<org.gerdiproject.store.data.model.ResearchData> getResearchDataList() {
+    return researchDataList;
   }
 
   /**
-   * Sets the value of the 'favorite_color' field.
+   * Sets the value of the 'researchDataList' field.
    * @param value the value to set.
    */
-  public void setFavoriteColor(java.lang.CharSequence value) {
-    this.favorite_color = value;
+  public void setResearchDataList(java.util.List<org.gerdiproject.store.data.model.ResearchData> value) {
+    this.researchDataList = value;
   }
 
   /**
@@ -176,9 +176,9 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<StoreDataModel>
     implements org.apache.avro.data.RecordBuilder<StoreDataModel> {
 
-    private java.lang.CharSequence name;
-    private java.lang.Integer favorite_number;
-    private java.lang.CharSequence favorite_color;
+    private java.lang.CharSequence TargetStore;
+    private java.lang.CharSequence User;
+    private java.util.List<org.gerdiproject.store.data.model.ResearchData> researchDataList;
 
     /** Creates a new Builder */
     private Builder() {
@@ -191,16 +191,16 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
      */
     private Builder(org.gerdiproject.store.data.model.StoreDataModel.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.name)) {
-        this.name = data().deepCopy(fields()[0].schema(), other.name);
+      if (isValidValue(fields()[0], other.TargetStore)) {
+        this.TargetStore = data().deepCopy(fields()[0].schema(), other.TargetStore);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.favorite_number)) {
-        this.favorite_number = data().deepCopy(fields()[1].schema(), other.favorite_number);
+      if (isValidValue(fields()[1], other.User)) {
+        this.User = data().deepCopy(fields()[1].schema(), other.User);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.favorite_color)) {
-        this.favorite_color = data().deepCopy(fields()[2].schema(), other.favorite_color);
+      if (isValidValue(fields()[2], other.researchDataList)) {
+        this.researchDataList = data().deepCopy(fields()[2].schema(), other.researchDataList);
         fieldSetFlags()[2] = true;
       }
     }
@@ -211,133 +211,133 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
      */
     private Builder(org.gerdiproject.store.data.model.StoreDataModel other) {
             super(SCHEMA$);
-      if (isValidValue(fields()[0], other.name)) {
-        this.name = data().deepCopy(fields()[0].schema(), other.name);
+      if (isValidValue(fields()[0], other.TargetStore)) {
+        this.TargetStore = data().deepCopy(fields()[0].schema(), other.TargetStore);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.favorite_number)) {
-        this.favorite_number = data().deepCopy(fields()[1].schema(), other.favorite_number);
+      if (isValidValue(fields()[1], other.User)) {
+        this.User = data().deepCopy(fields()[1].schema(), other.User);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.favorite_color)) {
-        this.favorite_color = data().deepCopy(fields()[2].schema(), other.favorite_color);
+      if (isValidValue(fields()[2], other.researchDataList)) {
+        this.researchDataList = data().deepCopy(fields()[2].schema(), other.researchDataList);
         fieldSetFlags()[2] = true;
       }
     }
 
     /**
-      * Gets the value of the 'name' field.
+      * Gets the value of the 'TargetStore' field.
       * @return The value.
       */
-    public java.lang.CharSequence getName() {
-      return name;
+    public java.lang.CharSequence getTargetStore() {
+      return TargetStore;
     }
 
     /**
-      * Sets the value of the 'name' field.
-      * @param value The value of 'name'.
+      * Sets the value of the 'TargetStore' field.
+      * @param value The value of 'TargetStore'.
       * @return This builder.
       */
-    public org.gerdiproject.store.data.model.StoreDataModel.Builder setName(java.lang.CharSequence value) {
+    public org.gerdiproject.store.data.model.StoreDataModel.Builder setTargetStore(java.lang.CharSequence value) {
       validate(fields()[0], value);
-      this.name = value;
+      this.TargetStore = value;
       fieldSetFlags()[0] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'name' field has been set.
-      * @return True if the 'name' field has been set, false otherwise.
+      * Checks whether the 'TargetStore' field has been set.
+      * @return True if the 'TargetStore' field has been set, false otherwise.
       */
-    public boolean hasName() {
+    public boolean hasTargetStore() {
       return fieldSetFlags()[0];
     }
 
 
     /**
-      * Clears the value of the 'name' field.
+      * Clears the value of the 'TargetStore' field.
       * @return This builder.
       */
-    public org.gerdiproject.store.data.model.StoreDataModel.Builder clearName() {
-      name = null;
+    public org.gerdiproject.store.data.model.StoreDataModel.Builder clearTargetStore() {
+      TargetStore = null;
       fieldSetFlags()[0] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'favorite_number' field.
+      * Gets the value of the 'User' field.
       * @return The value.
       */
-    public java.lang.Integer getFavoriteNumber() {
-      return favorite_number;
+    public java.lang.CharSequence getUser() {
+      return User;
     }
 
     /**
-      * Sets the value of the 'favorite_number' field.
-      * @param value The value of 'favorite_number'.
+      * Sets the value of the 'User' field.
+      * @param value The value of 'User'.
       * @return This builder.
       */
-    public org.gerdiproject.store.data.model.StoreDataModel.Builder setFavoriteNumber(java.lang.Integer value) {
+    public org.gerdiproject.store.data.model.StoreDataModel.Builder setUser(java.lang.CharSequence value) {
       validate(fields()[1], value);
-      this.favorite_number = value;
+      this.User = value;
       fieldSetFlags()[1] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'favorite_number' field has been set.
-      * @return True if the 'favorite_number' field has been set, false otherwise.
+      * Checks whether the 'User' field has been set.
+      * @return True if the 'User' field has been set, false otherwise.
       */
-    public boolean hasFavoriteNumber() {
+    public boolean hasUser() {
       return fieldSetFlags()[1];
     }
 
 
     /**
-      * Clears the value of the 'favorite_number' field.
+      * Clears the value of the 'User' field.
       * @return This builder.
       */
-    public org.gerdiproject.store.data.model.StoreDataModel.Builder clearFavoriteNumber() {
-      favorite_number = null;
+    public org.gerdiproject.store.data.model.StoreDataModel.Builder clearUser() {
+      User = null;
       fieldSetFlags()[1] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'favorite_color' field.
+      * Gets the value of the 'researchDataList' field.
       * @return The value.
       */
-    public java.lang.CharSequence getFavoriteColor() {
-      return favorite_color;
+    public java.util.List<org.gerdiproject.store.data.model.ResearchData> getResearchDataList() {
+      return researchDataList;
     }
 
     /**
-      * Sets the value of the 'favorite_color' field.
-      * @param value The value of 'favorite_color'.
+      * Sets the value of the 'researchDataList' field.
+      * @param value The value of 'researchDataList'.
       * @return This builder.
       */
-    public org.gerdiproject.store.data.model.StoreDataModel.Builder setFavoriteColor(java.lang.CharSequence value) {
+    public org.gerdiproject.store.data.model.StoreDataModel.Builder setResearchDataList(java.util.List<org.gerdiproject.store.data.model.ResearchData> value) {
       validate(fields()[2], value);
-      this.favorite_color = value;
+      this.researchDataList = value;
       fieldSetFlags()[2] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'favorite_color' field has been set.
-      * @return True if the 'favorite_color' field has been set, false otherwise.
+      * Checks whether the 'researchDataList' field has been set.
+      * @return True if the 'researchDataList' field has been set, false otherwise.
       */
-    public boolean hasFavoriteColor() {
+    public boolean hasResearchDataList() {
       return fieldSetFlags()[2];
     }
 
 
     /**
-      * Clears the value of the 'favorite_color' field.
+      * Clears the value of the 'researchDataList' field.
       * @return This builder.
       */
-    public org.gerdiproject.store.data.model.StoreDataModel.Builder clearFavoriteColor() {
-      favorite_color = null;
+    public org.gerdiproject.store.data.model.StoreDataModel.Builder clearResearchDataList() {
+      researchDataList = null;
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -347,9 +347,9 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
     public StoreDataModel build() {
       try {
         StoreDataModel record = new StoreDataModel();
-        record.name = fieldSetFlags()[0] ? this.name : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.favorite_number = fieldSetFlags()[1] ? this.favorite_number : (java.lang.Integer) defaultValue(fields()[1]);
-        record.favorite_color = fieldSetFlags()[2] ? this.favorite_color : (java.lang.CharSequence) defaultValue(fields()[2]);
+        record.TargetStore = fieldSetFlags()[0] ? this.TargetStore : (java.lang.CharSequence) defaultValue(fields()[0]);
+        record.User = fieldSetFlags()[1] ? this.User : (java.lang.CharSequence) defaultValue(fields()[1]);
+        record.researchDataList = fieldSetFlags()[2] ? this.researchDataList : (java.util.List<org.gerdiproject.store.data.model.ResearchData>) defaultValue(fields()[2]);
         return record;
       } catch (java.lang.Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);

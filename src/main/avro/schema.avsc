@@ -2,8 +2,23 @@
  "type": "record",
  "name": "StoreDataModel",
  "fields": [
-     {"name": "name", "type": "string"},
-     {"name": "favorite_number",  "type": ["int", "null"]},
-     {"name": "favorite_color", "type": ["string", "null"]}
- ]
+        { "name": "TargetStore", "type": "string" },
+        { "name": "User", "type": "string" },
+        { "name": "BookmarkID", "type": "string" },
+        {
+            "name":"researchDataList",
+            "type":{
+                "type": "array",
+                "items":{
+                    "name":"ResearchData",
+                    "type":"record",
+                    "fields":[
+                        {"name":"researchDataIdentifier", "type":"string"},
+                        {"name":"researchDataURL", "type":"string"},
+                        {"name":"researchDataLabel", "type":"string"}
+                    ]
+                }
+            }
+        }
+   ]
 }
