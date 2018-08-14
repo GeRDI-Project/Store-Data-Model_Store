@@ -2,9 +2,9 @@
  "type": "record",
  "name": "StoreDataModel",
  "fields": [
-        { "name": "TargetStore", "type": "string" },
-        { "name": "User", "type": "string" },
-        { "name": "BookmarkID", "type": "string" },
+        { "name": "targetStore", "type": "string" },
+        { "name": "user", "type": "string" },
+        { "name": "bookmarkID", "type": "string" },
         {
             "name":"researchDataList",
             "type":{

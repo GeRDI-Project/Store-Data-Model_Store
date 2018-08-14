@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -4467351187421071039L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"StoreDataModel\",\"namespace\":\"org.gerdiproject.store.data.model\",\"fields\":[{\"name\":\"TargetStore\",\"type\":\"string\"},{\"name\":\"User\",\"type\":\"string\"},{\"name\":\"researchDataList\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"ResearchData\",\"fields\":[{\"name\":\"researchDataIdentifier\",\"type\":\"string\"},{\"name\":\"researchDataURL\",\"type\":\"string\"},{\"name\":\"researchDataLabel\",\"type\":\"string\"}]}}}]}");
+  private static final long serialVersionUID = 2298115576883327292L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"StoreDataModel\",\"namespace\":\"org.gerdiproject.store.data.model\",\"fields\":[{\"name\":\"targetStore\",\"type\":\"string\"},{\"name\":\"user\",\"type\":\"string\"},{\"name\":\"bookmarkID\",\"type\":\"string\"},{\"name\":\"researchDataList\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"ResearchData\",\"fields\":[{\"name\":\"researchDataIdentifier\",\"type\":\"string\"},{\"name\":\"researchDataURL\",\"type\":\"string\"},{\"name\":\"researchDataLabel\",\"type\":\"string\"}]}}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -51,8 +51,9 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence TargetStore;
-  @Deprecated public java.lang.CharSequence User;
+  @Deprecated public java.lang.CharSequence targetStore;
+  @Deprecated public java.lang.CharSequence user;
+  @Deprecated public java.lang.CharSequence bookmarkID;
   @Deprecated public java.util.List<org.gerdiproject.store.data.model.ResearchData> researchDataList;
 
   /**
@@ -64,13 +65,15 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
 
   /**
    * All-args constructor.
-   * @param TargetStore The new value for TargetStore
-   * @param User The new value for User
+   * @param targetStore The new value for targetStore
+   * @param user The new value for user
+   * @param bookmarkID The new value for bookmarkID
    * @param researchDataList The new value for researchDataList
    */
-  public StoreDataModel(java.lang.CharSequence TargetStore, java.lang.CharSequence User, java.util.List<org.gerdiproject.store.data.model.ResearchData> researchDataList) {
-    this.TargetStore = TargetStore;
-    this.User = User;
+  public StoreDataModel(java.lang.CharSequence targetStore, java.lang.CharSequence user, java.lang.CharSequence bookmarkID, java.util.List<org.gerdiproject.store.data.model.ResearchData> researchDataList) {
+    this.targetStore = targetStore;
+    this.user = user;
+    this.bookmarkID = bookmarkID;
     this.researchDataList = researchDataList;
   }
 
@@ -78,9 +81,10 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return TargetStore;
-    case 1: return User;
-    case 2: return researchDataList;
+    case 0: return targetStore;
+    case 1: return user;
+    case 2: return bookmarkID;
+    case 3: return researchDataList;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -89,43 +93,60 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: TargetStore = (java.lang.CharSequence)value$; break;
-    case 1: User = (java.lang.CharSequence)value$; break;
-    case 2: researchDataList = (java.util.List<org.gerdiproject.store.data.model.ResearchData>)value$; break;
+    case 0: targetStore = (java.lang.CharSequence)value$; break;
+    case 1: user = (java.lang.CharSequence)value$; break;
+    case 2: bookmarkID = (java.lang.CharSequence)value$; break;
+    case 3: researchDataList = (java.util.List<org.gerdiproject.store.data.model.ResearchData>)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
 
   /**
-   * Gets the value of the 'TargetStore' field.
-   * @return The value of the 'TargetStore' field.
+   * Gets the value of the 'targetStore' field.
+   * @return The value of the 'targetStore' field.
    */
   public java.lang.CharSequence getTargetStore() {
-    return TargetStore;
+    return targetStore;
   }
 
   /**
-   * Sets the value of the 'TargetStore' field.
+   * Sets the value of the 'targetStore' field.
    * @param value the value to set.
    */
   public void setTargetStore(java.lang.CharSequence value) {
-    this.TargetStore = value;
+    this.targetStore = value;
   }
 
   /**
-   * Gets the value of the 'User' field.
-   * @return The value of the 'User' field.
+   * Gets the value of the 'user' field.
+   * @return The value of the 'user' field.
    */
   public java.lang.CharSequence getUser() {
-    return User;
+    return user;
   }
 
   /**
-   * Sets the value of the 'User' field.
+   * Sets the value of the 'user' field.
    * @param value the value to set.
    */
   public void setUser(java.lang.CharSequence value) {
-    this.User = value;
+    this.user = value;
+  }
+
+  /**
+   * Gets the value of the 'bookmarkID' field.
+   * @return The value of the 'bookmarkID' field.
+   */
+  public java.lang.CharSequence getBookmarkID() {
+    return bookmarkID;
+  }
+
+  /**
+   * Sets the value of the 'bookmarkID' field.
+   * @param value the value to set.
+   */
+  public void setBookmarkID(java.lang.CharSequence value) {
+    this.bookmarkID = value;
   }
 
   /**
@@ -176,8 +197,9 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<StoreDataModel>
     implements org.apache.avro.data.RecordBuilder<StoreDataModel> {
 
-    private java.lang.CharSequence TargetStore;
-    private java.lang.CharSequence User;
+    private java.lang.CharSequence targetStore;
+    private java.lang.CharSequence user;
+    private java.lang.CharSequence bookmarkID;
     private java.util.List<org.gerdiproject.store.data.model.ResearchData> researchDataList;
 
     /** Creates a new Builder */
@@ -191,17 +213,21 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
      */
     private Builder(org.gerdiproject.store.data.model.StoreDataModel.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.TargetStore)) {
-        this.TargetStore = data().deepCopy(fields()[0].schema(), other.TargetStore);
+      if (isValidValue(fields()[0], other.targetStore)) {
+        this.targetStore = data().deepCopy(fields()[0].schema(), other.targetStore);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.User)) {
-        this.User = data().deepCopy(fields()[1].schema(), other.User);
+      if (isValidValue(fields()[1], other.user)) {
+        this.user = data().deepCopy(fields()[1].schema(), other.user);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.researchDataList)) {
-        this.researchDataList = data().deepCopy(fields()[2].schema(), other.researchDataList);
+      if (isValidValue(fields()[2], other.bookmarkID)) {
+        this.bookmarkID = data().deepCopy(fields()[2].schema(), other.bookmarkID);
         fieldSetFlags()[2] = true;
+      }
+      if (isValidValue(fields()[3], other.researchDataList)) {
+        this.researchDataList = data().deepCopy(fields()[3].schema(), other.researchDataList);
+        fieldSetFlags()[3] = true;
       }
     }
 
@@ -211,43 +237,47 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
      */
     private Builder(org.gerdiproject.store.data.model.StoreDataModel other) {
             super(SCHEMA$);
-      if (isValidValue(fields()[0], other.TargetStore)) {
-        this.TargetStore = data().deepCopy(fields()[0].schema(), other.TargetStore);
+      if (isValidValue(fields()[0], other.targetStore)) {
+        this.targetStore = data().deepCopy(fields()[0].schema(), other.targetStore);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.User)) {
-        this.User = data().deepCopy(fields()[1].schema(), other.User);
+      if (isValidValue(fields()[1], other.user)) {
+        this.user = data().deepCopy(fields()[1].schema(), other.user);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.researchDataList)) {
-        this.researchDataList = data().deepCopy(fields()[2].schema(), other.researchDataList);
+      if (isValidValue(fields()[2], other.bookmarkID)) {
+        this.bookmarkID = data().deepCopy(fields()[2].schema(), other.bookmarkID);
         fieldSetFlags()[2] = true;
+      }
+      if (isValidValue(fields()[3], other.researchDataList)) {
+        this.researchDataList = data().deepCopy(fields()[3].schema(), other.researchDataList);
+        fieldSetFlags()[3] = true;
       }
     }
 
     /**
-      * Gets the value of the 'TargetStore' field.
+      * Gets the value of the 'targetStore' field.
       * @return The value.
       */
     public java.lang.CharSequence getTargetStore() {
-      return TargetStore;
+      return targetStore;
     }
 
     /**
-      * Sets the value of the 'TargetStore' field.
-      * @param value The value of 'TargetStore'.
+      * Sets the value of the 'targetStore' field.
+      * @param value The value of 'targetStore'.
       * @return This builder.
       */
     public org.gerdiproject.store.data.model.StoreDataModel.Builder setTargetStore(java.lang.CharSequence value) {
       validate(fields()[0], value);
-      this.TargetStore = value;
+      this.targetStore = value;
       fieldSetFlags()[0] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'TargetStore' field has been set.
-      * @return True if the 'TargetStore' field has been set, false otherwise.
+      * Checks whether the 'targetStore' field has been set.
+      * @return True if the 'targetStore' field has been set, false otherwise.
       */
     public boolean hasTargetStore() {
       return fieldSetFlags()[0];
@@ -255,38 +285,38 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
 
 
     /**
-      * Clears the value of the 'TargetStore' field.
+      * Clears the value of the 'targetStore' field.
       * @return This builder.
       */
     public org.gerdiproject.store.data.model.StoreDataModel.Builder clearTargetStore() {
-      TargetStore = null;
+      targetStore = null;
       fieldSetFlags()[0] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'User' field.
+      * Gets the value of the 'user' field.
       * @return The value.
       */
     public java.lang.CharSequence getUser() {
-      return User;
+      return user;
     }
 
     /**
-      * Sets the value of the 'User' field.
-      * @param value The value of 'User'.
+      * Sets the value of the 'user' field.
+      * @param value The value of 'user'.
       * @return This builder.
       */
     public org.gerdiproject.store.data.model.StoreDataModel.Builder setUser(java.lang.CharSequence value) {
       validate(fields()[1], value);
-      this.User = value;
+      this.user = value;
       fieldSetFlags()[1] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'User' field has been set.
-      * @return True if the 'User' field has been set, false otherwise.
+      * Checks whether the 'user' field has been set.
+      * @return True if the 'user' field has been set, false otherwise.
       */
     public boolean hasUser() {
       return fieldSetFlags()[1];
@@ -294,12 +324,51 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
 
 
     /**
-      * Clears the value of the 'User' field.
+      * Clears the value of the 'user' field.
       * @return This builder.
       */
     public org.gerdiproject.store.data.model.StoreDataModel.Builder clearUser() {
-      User = null;
+      user = null;
       fieldSetFlags()[1] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'bookmarkID' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getBookmarkID() {
+      return bookmarkID;
+    }
+
+    /**
+      * Sets the value of the 'bookmarkID' field.
+      * @param value The value of 'bookmarkID'.
+      * @return This builder.
+      */
+    public org.gerdiproject.store.data.model.StoreDataModel.Builder setBookmarkID(java.lang.CharSequence value) {
+      validate(fields()[2], value);
+      this.bookmarkID = value;
+      fieldSetFlags()[2] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'bookmarkID' field has been set.
+      * @return True if the 'bookmarkID' field has been set, false otherwise.
+      */
+    public boolean hasBookmarkID() {
+      return fieldSetFlags()[2];
+    }
+
+
+    /**
+      * Clears the value of the 'bookmarkID' field.
+      * @return This builder.
+      */
+    public org.gerdiproject.store.data.model.StoreDataModel.Builder clearBookmarkID() {
+      bookmarkID = null;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -317,9 +386,9 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
       * @return This builder.
       */
     public org.gerdiproject.store.data.model.StoreDataModel.Builder setResearchDataList(java.util.List<org.gerdiproject.store.data.model.ResearchData> value) {
-      validate(fields()[2], value);
+      validate(fields()[3], value);
       this.researchDataList = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[3] = true;
       return this;
     }
 
@@ -328,7 +397,7 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
       * @return True if the 'researchDataList' field has been set, false otherwise.
       */
     public boolean hasResearchDataList() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[3];
     }
 
 
@@ -338,7 +407,7 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
       */
     public org.gerdiproject.store.data.model.StoreDataModel.Builder clearResearchDataList() {
       researchDataList = null;
-      fieldSetFlags()[2] = false;
+      fieldSetFlags()[3] = false;
       return this;
     }
 
@@ -347,9 +416,10 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
     public StoreDataModel build() {
       try {
         StoreDataModel record = new StoreDataModel();
-        record.TargetStore = fieldSetFlags()[0] ? this.TargetStore : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.User = fieldSetFlags()[1] ? this.User : (java.lang.CharSequence) defaultValue(fields()[1]);
-        record.researchDataList = fieldSetFlags()[2] ? this.researchDataList : (java.util.List<org.gerdiproject.store.data.model.ResearchData>) defaultValue(fields()[2]);
+        record.targetStore = fieldSetFlags()[0] ? this.targetStore : (java.lang.CharSequence) defaultValue(fields()[0]);
+        record.user = fieldSetFlags()[1] ? this.user : (java.lang.CharSequence) defaultValue(fields()[1]);
+        record.bookmarkID = fieldSetFlags()[2] ? this.bookmarkID : (java.lang.CharSequence) defaultValue(fields()[2]);
+        record.researchDataList = fieldSetFlags()[3] ? this.researchDataList : (java.util.List<org.gerdiproject.store.data.model.ResearchData>) defaultValue(fields()[3]);
         return record;
       } catch (java.lang.Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);
