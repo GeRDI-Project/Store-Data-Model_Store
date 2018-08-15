@@ -1,4 +1,4 @@
-{"namespace": "org.gerdiproject.store.data.model",
+{"namespace": "de.gerdiproject.store.data.model",
  "type": "record",
  "name": "StoreDataModel",
  "fields": [

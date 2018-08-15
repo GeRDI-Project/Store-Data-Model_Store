@@ -13,34 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.gerdiproject.store.data.kafka.serializer;
+package de.gerdiproject.store.data.kafka.serializer;
 
-import org.apache.kafka.common.serialization.ByteBufferSerializer;
-import org.apache.kafka.common.serialization.Serializer;
-import org.gerdiproject.store.data.model.StoreDataModel;
+import de.gerdiproject.store.data.model.StoreDataModel;
+import org.apache.kafka.common.serialization.ByteBufferDeserializer;
+import org.apache.kafka.common.serialization.Deserializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.Map;
 
-public class StoreDataSerializer  implements Serializer<StoreDataModel> {
+public class StoreDataDeserializer implements Deserializer<StoreDataModel> {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(StoreDataSerializer.class);
 
-    private final ByteBufferSerializer bbDeserializer = new ByteBufferSerializer();
+    private static final Logger LOGGER = LoggerFactory.getLogger(StoreDataDeserializer.class);
+
+    private final ByteBufferDeserializer bbSerializer = new ByteBufferDeserializer();
 
     @Override
-    public void configure(Map<String, ?> configs, boolean isKey) {
+    public void configure(Map<String, ?> map, boolean b) {
         // Nothing to do
     }
 
     @Override
-    public byte[] serialize(String topic, StoreDataModel data) {
+    public StoreDataModel deserialize(String topic, byte[] bytes) {
         try {
-            return bbDeserializer.serialize(topic, data.toByteBuffer());
+            return StoreDataModel.fromByteBuffer(bbSerializer.deserialize(topic, bytes));
         } catch (IOException e) {
-            LOGGER.error("Error occured while serializing a StoreData instance.", e);
+            LOGGER.error("Error occured while deserializing a StoreData instance.", e);
         }
         return null;
     }
