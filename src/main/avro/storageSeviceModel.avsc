@@ -1,0 +1,11 @@
+{"namespace": "de.gerdiproject.store.data.model",
+ "type": "record",
+ "name": "StoreServiceInfo",
+ "fields": [
+        { "name": "UID", "type": "string" },
+        { "name": "name", "type": "string" },
+        { "name": "publicKey", "type": "string" },
+        { "name": "provider", "type": "string" },
+        { "name": "credentialType", "type": "string" }
+   ]
+}
