@@ -1,6 +1,6 @@
 {"namespace": "de.gerdiproject.store.data.model",
  "type": "record",
- "name": "StoreDataModel",
+ "name": "ResearchDataTransfer",
  "fields": [
         { "name": "targetStore", "type": "string" },
         { "name": "user", "type": "string" },
