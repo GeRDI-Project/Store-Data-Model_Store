@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6bf25c91-cd57-4799-a290-66899df66294" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/avro/schema.avsc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/avro/schema.avsc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gerdiproject/store/data/kafka/serializer/StoreDataDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/gerdiproject/store/data/kafka/serializer/StoreDataDeserializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gerdiproject/store/data/kafka/serializer/StoreDataSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/gerdiproject/store/data/kafka/serializer/StoreDataSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gerdiproject/store/data/model/ResearchData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/gerdiproject/store/data/model/ResearchData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gerdiproject/store/data/model/StoreDataModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/gerdiproject/store/data/model/StoreDataModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,8 +17,10 @@
     <session id="-1984919001">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -30,15 +28,15 @@
           <entry key="avsc" value="314" />
           <entry key="gitignore" value="4" />
           <entry key="java" value="216" />
-          <entry key="txt" value="97" />
-          <entry key="xml" value="178" />
+          <entry key="txt" value="117" />
+          <entry key="xml" value="184" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="216" />
-          <entry key="PLAIN_TEXT" value="415" />
-          <entry key="XML" value="178" />
+          <entry key="PLAIN_TEXT" value="435" />
+          <entry key="XML" value="184" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -64,16 +62,17 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/gerdiproject/store/data/kafka/serializer/StoreDataDeserializer.java">
+        <entry file="file://$MAVEN_REPOSITORY$/de/gerdi-project/GeRDI-parent/3.0.1/GeRDI-parent-3.0.1.pom">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/gerdiproject/store/data/model/ResearchData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" column="94" selection-start-line="29" selection-start-column="94" selection-end-line="29" selection-end-column="94" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -87,39 +86,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storedatamodel.iml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="22" />
+            <state relative-caret-position="180">
+              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$MAVEN_REPOSITORY$/de/gerdi-project/GeRDI-parent/3.0.1/GeRDI-parent-3.0.1.pom">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/gerdiproject/store/data/kafka/serializer/StoreDataDeserializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="29" column="94" selection-start-line="29" selection-start-column="94" selection-end-line="29" selection-end-column="94" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storedatamodel.iml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/gerdiproject/store/data/model/StoreDataModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2415">
+            <state relative-caret-position="2145">
               <caret line="168" column="40" selection-start-line="168" selection-start-column="40" selection-end-line="168" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/gerdiproject/store/data/model/ResearchData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -127,7 +125,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/gerdiproject/store/data/kafka/serializer/StoreDataSerializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
+            <state relative-caret-position="105">
               <caret line="28" column="92" selection-start-line="28" selection-start-column="92" selection-end-line="28" selection-end-column="92" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -161,9 +159,9 @@
         <option value="$PROJECT_DIR$/src/main/java/org/gerdiproject/store/data/kafka/serializer/StoreDataSerializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gerdiproject/store/data/kafka/serializer/StoreDataDeserializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gerdiproject/store/data/model/StoreDataModel.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/avro/researchdata.avsc" />
         <option value="$PROJECT_DIR$/src/main/avro/schema.avsc" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -215,7 +213,6 @@
     <panes>
       <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,10 +261,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534317561472" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534334585776" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -343,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534261658837</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changed package name">
+      <created>1534322505005</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1534322505005</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -355,15 +360,16 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24980111" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25179" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49960223" weight="0.32978722" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50119334" side_tool="true" visible="true" weight="0.32902735" />
       <window_info anchor="bottom" id="Messages" order="2" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49920446" weight="0.32978722" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.4988067" visible="true" weight="0.32902735" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.4988067" weight="0.32902735" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -385,30 +391,16 @@
     <MESSAGE value="fixed QA stuff" />
     <MESSAGE value="Changed the schema" />
     <MESSAGE value="minor nameing issues fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor nameing issues fixed" />
+    <MESSAGE value="changed package name" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed package name" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/gerdiproject/store/data/model/StoreEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/gerdiproject/store/data/kafka/serializer/StoreDataKafkaSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/gerdiproject/store/data/model/StoreEntity.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/gerdiproject/store/data/kafka/serializer/StoreDataKafkaSerializer.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/2.0.0/kafka-clients-2.0.0.jar!/org/apache/kafka/common/serialization/Deserializer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -426,13 +418,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/avro/researchdata.avsc" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/gerdiproject/store/data/model/researchData.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/gerdiproject/store/data/kafka/serializer/StoreDataDeserializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="29" column="94" selection-start-line="29" selection-start-column="94" selection-end-line="29" selection-end-column="94" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/avro/schema.avsc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storedatamodel.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$MAVEN_REPOSITORY$/de/gerdi-project/GeRDI-parent/3.0.1/GeRDI-parent-3.0.1.pom">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/avro/researchdata.avsc">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/gerdiproject/store/data/model/StoreDataModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="39" />
+        <state relative-caret-position="2145">
+          <caret line="168" column="40" selection-start-line="168" selection-start-column="40" selection-end-line="168" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -443,27 +458,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/gerdiproject/store/data/model/StoreDataModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2415">
-          <caret line="168" column="40" selection-start-line="168" selection-start-column="40" selection-end-line="168" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/gerdiproject/store/data/kafka/serializer/StoreDataDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="94" selection-start-line="29" selection-start-column="94" selection-end-line="29" selection-end-column="94" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/gerdiproject/store/data/kafka/serializer/StoreDataSerializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
+        <state relative-caret-position="105">
           <caret line="28" column="92" selection-start-line="28" selection-start-column="92" selection-end-line="28" selection-end-column="92" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -472,27 +469,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/gerdiproject/store/data/model/researchData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storedatamodel.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/avro/schema.avsc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="22" />
+        <state relative-caret-position="180">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
         </state>
       </provider>
     </entry>
