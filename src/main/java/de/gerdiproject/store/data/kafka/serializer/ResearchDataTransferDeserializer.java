@@ -15,7 +15,7 @@
  */
 package de.gerdiproject.store.data.kafka.serializer;
 
-import de.gerdiproject.store.data.model.StoreDataModel;
+import de.gerdiproject.store.data.model.ResearchDataTransfer;
 import org.apache.kafka.common.serialization.ByteBufferDeserializer;
 import org.apache.kafka.common.serialization.Deserializer;
 import org.slf4j.Logger;
@@ -24,7 +24,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.Map;
 
-public class StoreDataDeserializer implements Deserializer<StoreDataModel> {
+public class ResearchDataTransferDeserializer implements Deserializer<ResearchDataTransfer> {
 
 
     private static final Logger LOGGER = LoggerFactory.getLogger(StoreDataDeserializer.class);
@@ -37,9 +37,9 @@ public class StoreDataDeserializer implements Deserializer<StoreDataModel> {
     }
 
     @Override
-    public StoreDataModel deserialize(String topic, byte[] bytes) {
+    public ResearchDataTransfer deserialize(String topic, byte[] bytes) {
         try {
-            return StoreDataModel.fromByteBuffer(bbSerializer.deserialize(topic, bytes));
+            return ResearchDataTransfer.fromByteBuffer(bbSerializer.deserialize(topic, bytes));
         } catch (IOException e) {
             LOGGER.error("Error occured while deserializing a StoreData instance.", e);
         }
