@@ -2,8 +2,21 @@
  "type": "record",
  "name": "StoreServiceInfo",
  "fields": [
-        { "name": "UID", "type": "string" },
-        { "name": "name", "type": "string" },
-        { "name": "provider", "type": "string" }
+        {   "name": "UID",
+            "type": "string"
+        },
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "provider",
+            "type": "string"
+        },
+        {
+            "name": "timestamp",
+            "type": "int",
+            "logicalType": "timestamp-millis"
+        }
    ]
 }

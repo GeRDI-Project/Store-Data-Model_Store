@@ -27,7 +27,7 @@ import java.util.Map;
 public class StoreServiceInfoDeserializer implements Deserializer<StoreServiceInfo> {
 
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(StoreDataDeserializer.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(StoreServiceInfoDeserializer.class);
 
     private final ByteBufferDeserializer bbSerializer = new ByteBufferDeserializer();
 

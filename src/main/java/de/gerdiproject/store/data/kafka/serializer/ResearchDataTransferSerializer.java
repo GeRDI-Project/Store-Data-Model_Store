@@ -26,7 +26,7 @@ import java.util.Map;
 
 public class ResearchDataTransferSerializer  implements Serializer<ResearchDataTransfer> {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(StoreDataSerializer.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ResearchDataTransferSerializer.class);
 
     private final ByteBufferSerializer bbDeserializer = new ByteBufferSerializer();
 

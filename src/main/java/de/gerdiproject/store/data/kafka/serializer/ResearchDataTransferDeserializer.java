@@ -27,7 +27,7 @@ import java.util.Map;
 public class ResearchDataTransferDeserializer implements Deserializer<ResearchDataTransfer> {
 
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(StoreDataDeserializer.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ResearchDataTransferDeserializer.class);
 
     private final ByteBufferDeserializer bbSerializer = new ByteBufferDeserializer();
 
