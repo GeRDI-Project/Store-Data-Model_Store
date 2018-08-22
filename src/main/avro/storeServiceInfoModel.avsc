@@ -1,0 +1,26 @@
+{"namespace": "de.gerdiproject.store.data.model",
+ "type": "record",
+ "name": "StoreServiceInfo",
+ "fields": [
+        {   "name": "UID",
+            "type": "string"
+        },
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "provider",
+            "type": "string"
+        },
+        {
+            "name": "frontendURL",
+            "type": "string"
+        },
+        {
+            "name": "timestamp",
+            "type": "int",
+            "logicalType": "timestamp-millis"
+        }
+   ]
+}

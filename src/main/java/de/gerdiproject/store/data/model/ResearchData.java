@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class ResearchData extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 1841373620444682482L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"ResearchData\",\"namespace\":\"org.gerdiproject.store.data.model\",\"fields\":[{\"name\":\"researchDataIdentifier\",\"type\":\"string\"},{\"name\":\"researchDataURL\",\"type\":\"string\"},{\"name\":\"researchDataLabel\",\"type\":\"string\"}]}");
+  private static final long serialVersionUID = 3098909373713598201L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"ResearchData\",\"namespace\":\"de.gerdiproject.store.data.model\",\"fields\":[{\"name\":\"researchDataIdentifier\",\"type\":\"string\"},{\"name\":\"researchDataURL\",\"type\":\"string\"},{\"name\":\"researchDataLabel\",\"type\":\"string\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -148,8 +148,8 @@ public class ResearchData extends org.apache.avro.specific.SpecificRecordBase im
    * Creates a new ResearchData RecordBuilder.
    * @return A new ResearchData RecordBuilder
    */
-  public static ResearchData.Builder newBuilder() {
-    return new ResearchData.Builder();
+  public static de.gerdiproject.store.data.model.ResearchData.Builder newBuilder() {
+    return new de.gerdiproject.store.data.model.ResearchData.Builder();
   }
 
   /**
@@ -157,8 +157,8 @@ public class ResearchData extends org.apache.avro.specific.SpecificRecordBase im
    * @param other The existing builder to copy.
    * @return A new ResearchData RecordBuilder
    */
-  public static ResearchData.Builder newBuilder(ResearchData.Builder other) {
-    return new ResearchData.Builder(other);
+  public static de.gerdiproject.store.data.model.ResearchData.Builder newBuilder(de.gerdiproject.store.data.model.ResearchData.Builder other) {
+    return new de.gerdiproject.store.data.model.ResearchData.Builder(other);
   }
 
   /**
@@ -166,8 +166,8 @@ public class ResearchData extends org.apache.avro.specific.SpecificRecordBase im
    * @param other The existing instance to copy.
    * @return A new ResearchData RecordBuilder
    */
-  public static ResearchData.Builder newBuilder(ResearchData other) {
-    return new ResearchData.Builder(other);
+  public static de.gerdiproject.store.data.model.ResearchData.Builder newBuilder(de.gerdiproject.store.data.model.ResearchData other) {
+    return new de.gerdiproject.store.data.model.ResearchData.Builder(other);
   }
 
   /**
@@ -189,7 +189,7 @@ public class ResearchData extends org.apache.avro.specific.SpecificRecordBase im
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(ResearchData.Builder other) {
+    private Builder(de.gerdiproject.store.data.model.ResearchData.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.researchDataIdentifier)) {
         this.researchDataIdentifier = data().deepCopy(fields()[0].schema(), other.researchDataIdentifier);
@@ -209,7 +209,7 @@ public class ResearchData extends org.apache.avro.specific.SpecificRecordBase im
      * Creates a Builder by copying an existing ResearchData instance
      * @param other The existing instance to copy.
      */
-    private Builder(ResearchData other) {
+    private Builder(de.gerdiproject.store.data.model.ResearchData other) {
             super(SCHEMA$);
       if (isValidValue(fields()[0], other.researchDataIdentifier)) {
         this.researchDataIdentifier = data().deepCopy(fields()[0].schema(), other.researchDataIdentifier);
@@ -238,7 +238,7 @@ public class ResearchData extends org.apache.avro.specific.SpecificRecordBase im
       * @param value The value of 'researchDataIdentifier'.
       * @return This builder.
       */
-    public ResearchData.Builder setResearchDataIdentifier(java.lang.CharSequence value) {
+    public de.gerdiproject.store.data.model.ResearchData.Builder setResearchDataIdentifier(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.researchDataIdentifier = value;
       fieldSetFlags()[0] = true;
@@ -258,7 +258,7 @@ public class ResearchData extends org.apache.avro.specific.SpecificRecordBase im
       * Clears the value of the 'researchDataIdentifier' field.
       * @return This builder.
       */
-    public ResearchData.Builder clearResearchDataIdentifier() {
+    public de.gerdiproject.store.data.model.ResearchData.Builder clearResearchDataIdentifier() {
       researchDataIdentifier = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -277,7 +277,7 @@ public class ResearchData extends org.apache.avro.specific.SpecificRecordBase im
       * @param value The value of 'researchDataURL'.
       * @return This builder.
       */
-    public ResearchData.Builder setResearchDataURL(java.lang.CharSequence value) {
+    public de.gerdiproject.store.data.model.ResearchData.Builder setResearchDataURL(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.researchDataURL = value;
       fieldSetFlags()[1] = true;
@@ -297,7 +297,7 @@ public class ResearchData extends org.apache.avro.specific.SpecificRecordBase im
       * Clears the value of the 'researchDataURL' field.
       * @return This builder.
       */
-    public ResearchData.Builder clearResearchDataURL() {
+    public de.gerdiproject.store.data.model.ResearchData.Builder clearResearchDataURL() {
       researchDataURL = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -316,7 +316,7 @@ public class ResearchData extends org.apache.avro.specific.SpecificRecordBase im
       * @param value The value of 'researchDataLabel'.
       * @return This builder.
       */
-    public ResearchData.Builder setResearchDataLabel(java.lang.CharSequence value) {
+    public de.gerdiproject.store.data.model.ResearchData.Builder setResearchDataLabel(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.researchDataLabel = value;
       fieldSetFlags()[2] = true;
@@ -336,7 +336,7 @@ public class ResearchData extends org.apache.avro.specific.SpecificRecordBase im
       * Clears the value of the 'researchDataLabel' field.
       * @return This builder.
       */
-    public ResearchData.Builder clearResearchDataLabel() {
+    public de.gerdiproject.store.data.model.ResearchData.Builder clearResearchDataLabel() {
       researchDataLabel = null;
       fieldSetFlags()[2] = false;
       return this;

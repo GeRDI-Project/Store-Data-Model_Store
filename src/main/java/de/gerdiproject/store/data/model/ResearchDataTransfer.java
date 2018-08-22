@@ -12,23 +12,23 @@ import org.apache.avro.message.SchemaStore;
 
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
-public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 2298115576883327292L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"StoreDataModel\",\"namespace\":\"org.gerdiproject.store.data.model\",\"fields\":[{\"name\":\"targetStore\",\"type\":\"string\"},{\"name\":\"user\",\"type\":\"string\"},{\"name\":\"bookmarkID\",\"type\":\"string\"},{\"name\":\"researchDataList\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"ResearchData\",\"fields\":[{\"name\":\"researchDataIdentifier\",\"type\":\"string\"},{\"name\":\"researchDataURL\",\"type\":\"string\"},{\"name\":\"researchDataLabel\",\"type\":\"string\"}]}}}]}");
+public class ResearchDataTransfer extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+  private static final long serialVersionUID = -7002040921965108518L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"ResearchDataTransfer\",\"namespace\":\"de.gerdiproject.store.data.model\",\"fields\":[{\"name\":\"targetStore\",\"type\":\"string\"},{\"name\":\"user\",\"type\":\"string\"},{\"name\":\"bookmarkID\",\"type\":\"string\"},{\"name\":\"researchDataList\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"ResearchData\",\"fields\":[{\"name\":\"researchDataIdentifier\",\"type\":\"string\"},{\"name\":\"researchDataURL\",\"type\":\"string\"},{\"name\":\"researchDataLabel\",\"type\":\"string\"}]}}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
 
-  private static final BinaryMessageEncoder<StoreDataModel> ENCODER =
-      new BinaryMessageEncoder<StoreDataModel>(MODEL$, SCHEMA$);
+  private static final BinaryMessageEncoder<ResearchDataTransfer> ENCODER =
+      new BinaryMessageEncoder<ResearchDataTransfer>(MODEL$, SCHEMA$);
 
-  private static final BinaryMessageDecoder<StoreDataModel> DECODER =
-      new BinaryMessageDecoder<StoreDataModel>(MODEL$, SCHEMA$);
+  private static final BinaryMessageDecoder<ResearchDataTransfer> DECODER =
+      new BinaryMessageDecoder<ResearchDataTransfer>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageDecoder instance used by this class.
    */
-  public static BinaryMessageDecoder<StoreDataModel> getDecoder() {
+  public static BinaryMessageDecoder<ResearchDataTransfer> getDecoder() {
     return DECODER;
   }
 
@@ -36,17 +36,17 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
    * Create a new BinaryMessageDecoder instance for this class that uses the specified {@link SchemaStore}.
    * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
    */
-  public static BinaryMessageDecoder<StoreDataModel> createDecoder(SchemaStore resolver) {
-    return new BinaryMessageDecoder<StoreDataModel>(MODEL$, SCHEMA$, resolver);
+  public static BinaryMessageDecoder<ResearchDataTransfer> createDecoder(SchemaStore resolver) {
+    return new BinaryMessageDecoder<ResearchDataTransfer>(MODEL$, SCHEMA$, resolver);
   }
 
-  /** Serializes this StoreDataModel to a ByteBuffer. */
+  /** Serializes this ResearchDataTransfer to a ByteBuffer. */
   public java.nio.ByteBuffer toByteBuffer() throws java.io.IOException {
     return ENCODER.encode(this);
   }
 
-  /** Deserializes a StoreDataModel from a ByteBuffer. */
-  public static StoreDataModel fromByteBuffer(
+  /** Deserializes a ResearchDataTransfer from a ByteBuffer. */
+  public static ResearchDataTransfer fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
@@ -54,14 +54,14 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
   @Deprecated public java.lang.CharSequence targetStore;
   @Deprecated public java.lang.CharSequence user;
   @Deprecated public java.lang.CharSequence bookmarkID;
-  @Deprecated public java.util.List<ResearchData> researchDataList;
+  @Deprecated public java.util.List<de.gerdiproject.store.data.model.ResearchData> researchDataList;
 
   /**
    * Default constructor.  Note that this does not initialize fields
    * to their default values from the schema.  If that is desired then
    * one should use <code>newBuilder()</code>.
    */
-  public StoreDataModel() {}
+  public ResearchDataTransfer() {}
 
   /**
    * All-args constructor.
@@ -70,7 +70,7 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
    * @param bookmarkID The new value for bookmarkID
    * @param researchDataList The new value for researchDataList
    */
-  public StoreDataModel(java.lang.CharSequence targetStore, java.lang.CharSequence user, java.lang.CharSequence bookmarkID, java.util.List<ResearchData> researchDataList) {
+  public ResearchDataTransfer(java.lang.CharSequence targetStore, java.lang.CharSequence user, java.lang.CharSequence bookmarkID, java.util.List<de.gerdiproject.store.data.model.ResearchData> researchDataList) {
     this.targetStore = targetStore;
     this.user = user;
     this.bookmarkID = bookmarkID;
@@ -96,7 +96,7 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
     case 0: targetStore = (java.lang.CharSequence)value$; break;
     case 1: user = (java.lang.CharSequence)value$; break;
     case 2: bookmarkID = (java.lang.CharSequence)value$; break;
-    case 3: researchDataList = (java.util.List<ResearchData>)value$; break;
+    case 3: researchDataList = (java.util.List<de.gerdiproject.store.data.model.ResearchData>)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -153,7 +153,7 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
    * Gets the value of the 'researchDataList' field.
    * @return The value of the 'researchDataList' field.
    */
-  public java.util.List<ResearchData> getResearchDataList() {
+  public java.util.List<de.gerdiproject.store.data.model.ResearchData> getResearchDataList() {
     return researchDataList;
   }
 
@@ -161,46 +161,46 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
    * Sets the value of the 'researchDataList' field.
    * @param value the value to set.
    */
-  public void setResearchDataList(java.util.List<ResearchData> value) {
+  public void setResearchDataList(java.util.List<de.gerdiproject.store.data.model.ResearchData> value) {
     this.researchDataList = value;
   }
 
   /**
-   * Creates a new StoreDataModel RecordBuilder.
-   * @return A new StoreDataModel RecordBuilder
+   * Creates a new ResearchDataTransfer RecordBuilder.
+   * @return A new ResearchDataTransfer RecordBuilder
    */
-  public static StoreDataModel.Builder newBuilder() {
-    return new StoreDataModel.Builder();
+  public static de.gerdiproject.store.data.model.ResearchDataTransfer.Builder newBuilder() {
+    return new de.gerdiproject.store.data.model.ResearchDataTransfer.Builder();
   }
 
   /**
-   * Creates a new StoreDataModel RecordBuilder by copying an existing Builder.
+   * Creates a new ResearchDataTransfer RecordBuilder by copying an existing Builder.
    * @param other The existing builder to copy.
-   * @return A new StoreDataModel RecordBuilder
+   * @return A new ResearchDataTransfer RecordBuilder
    */
-  public static StoreDataModel.Builder newBuilder(StoreDataModel.Builder other) {
-    return new StoreDataModel.Builder(other);
+  public static de.gerdiproject.store.data.model.ResearchDataTransfer.Builder newBuilder(de.gerdiproject.store.data.model.ResearchDataTransfer.Builder other) {
+    return new de.gerdiproject.store.data.model.ResearchDataTransfer.Builder(other);
   }
 
   /**
-   * Creates a new StoreDataModel RecordBuilder by copying an existing StoreDataModel instance.
+   * Creates a new ResearchDataTransfer RecordBuilder by copying an existing ResearchDataTransfer instance.
    * @param other The existing instance to copy.
-   * @return A new StoreDataModel RecordBuilder
+   * @return A new ResearchDataTransfer RecordBuilder
    */
-  public static StoreDataModel.Builder newBuilder(StoreDataModel other) {
-    return new StoreDataModel.Builder(other);
+  public static de.gerdiproject.store.data.model.ResearchDataTransfer.Builder newBuilder(de.gerdiproject.store.data.model.ResearchDataTransfer other) {
+    return new de.gerdiproject.store.data.model.ResearchDataTransfer.Builder(other);
   }
 
   /**
-   * RecordBuilder for StoreDataModel instances.
+   * RecordBuilder for ResearchDataTransfer instances.
    */
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<StoreDataModel>
-    implements org.apache.avro.data.RecordBuilder<StoreDataModel> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<ResearchDataTransfer>
+    implements org.apache.avro.data.RecordBuilder<ResearchDataTransfer> {
 
     private java.lang.CharSequence targetStore;
     private java.lang.CharSequence user;
     private java.lang.CharSequence bookmarkID;
-    private java.util.List<ResearchData> researchDataList;
+    private java.util.List<de.gerdiproject.store.data.model.ResearchData> researchDataList;
 
     /** Creates a new Builder */
     private Builder() {
@@ -211,7 +211,7 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(StoreDataModel.Builder other) {
+    private Builder(de.gerdiproject.store.data.model.ResearchDataTransfer.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.targetStore)) {
         this.targetStore = data().deepCopy(fields()[0].schema(), other.targetStore);
@@ -232,10 +232,10 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
     }
 
     /**
-     * Creates a Builder by copying an existing StoreDataModel instance
+     * Creates a Builder by copying an existing ResearchDataTransfer instance
      * @param other The existing instance to copy.
      */
-    private Builder(StoreDataModel other) {
+    private Builder(de.gerdiproject.store.data.model.ResearchDataTransfer other) {
             super(SCHEMA$);
       if (isValidValue(fields()[0], other.targetStore)) {
         this.targetStore = data().deepCopy(fields()[0].schema(), other.targetStore);
@@ -268,7 +268,7 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
       * @param value The value of 'targetStore'.
       * @return This builder.
       */
-    public StoreDataModel.Builder setTargetStore(java.lang.CharSequence value) {
+    public de.gerdiproject.store.data.model.ResearchDataTransfer.Builder setTargetStore(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.targetStore = value;
       fieldSetFlags()[0] = true;
@@ -288,7 +288,7 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
       * Clears the value of the 'targetStore' field.
       * @return This builder.
       */
-    public StoreDataModel.Builder clearTargetStore() {
+    public de.gerdiproject.store.data.model.ResearchDataTransfer.Builder clearTargetStore() {
       targetStore = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -307,7 +307,7 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
       * @param value The value of 'user'.
       * @return This builder.
       */
-    public StoreDataModel.Builder setUser(java.lang.CharSequence value) {
+    public de.gerdiproject.store.data.model.ResearchDataTransfer.Builder setUser(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.user = value;
       fieldSetFlags()[1] = true;
@@ -327,7 +327,7 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
       * Clears the value of the 'user' field.
       * @return This builder.
       */
-    public StoreDataModel.Builder clearUser() {
+    public de.gerdiproject.store.data.model.ResearchDataTransfer.Builder clearUser() {
       user = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -346,7 +346,7 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
       * @param value The value of 'bookmarkID'.
       * @return This builder.
       */
-    public StoreDataModel.Builder setBookmarkID(java.lang.CharSequence value) {
+    public de.gerdiproject.store.data.model.ResearchDataTransfer.Builder setBookmarkID(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.bookmarkID = value;
       fieldSetFlags()[2] = true;
@@ -366,7 +366,7 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
       * Clears the value of the 'bookmarkID' field.
       * @return This builder.
       */
-    public StoreDataModel.Builder clearBookmarkID() {
+    public de.gerdiproject.store.data.model.ResearchDataTransfer.Builder clearBookmarkID() {
       bookmarkID = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -376,7 +376,7 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
       * Gets the value of the 'researchDataList' field.
       * @return The value.
       */
-    public java.util.List<ResearchData> getResearchDataList() {
+    public java.util.List<de.gerdiproject.store.data.model.ResearchData> getResearchDataList() {
       return researchDataList;
     }
 
@@ -385,7 +385,7 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
       * @param value The value of 'researchDataList'.
       * @return This builder.
       */
-    public StoreDataModel.Builder setResearchDataList(java.util.List<ResearchData> value) {
+    public de.gerdiproject.store.data.model.ResearchDataTransfer.Builder setResearchDataList(java.util.List<de.gerdiproject.store.data.model.ResearchData> value) {
       validate(fields()[3], value);
       this.researchDataList = value;
       fieldSetFlags()[3] = true;
@@ -405,7 +405,7 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
       * Clears the value of the 'researchDataList' field.
       * @return This builder.
       */
-    public StoreDataModel.Builder clearResearchDataList() {
+    public de.gerdiproject.store.data.model.ResearchDataTransfer.Builder clearResearchDataList() {
       researchDataList = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -413,13 +413,13 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
 
     @Override
     @SuppressWarnings("unchecked")
-    public StoreDataModel build() {
+    public ResearchDataTransfer build() {
       try {
-        StoreDataModel record = new StoreDataModel();
+        ResearchDataTransfer record = new ResearchDataTransfer();
         record.targetStore = fieldSetFlags()[0] ? this.targetStore : (java.lang.CharSequence) defaultValue(fields()[0]);
         record.user = fieldSetFlags()[1] ? this.user : (java.lang.CharSequence) defaultValue(fields()[1]);
         record.bookmarkID = fieldSetFlags()[2] ? this.bookmarkID : (java.lang.CharSequence) defaultValue(fields()[2]);
-        record.researchDataList = fieldSetFlags()[3] ? this.researchDataList : (java.util.List<ResearchData>) defaultValue(fields()[3]);
+        record.researchDataList = fieldSetFlags()[3] ? this.researchDataList : (java.util.List<de.gerdiproject.store.data.model.ResearchData>) defaultValue(fields()[3]);
         return record;
       } catch (java.lang.Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);
@@ -428,8 +428,8 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumWriter<StoreDataModel>
-    WRITER$ = (org.apache.avro.io.DatumWriter<StoreDataModel>)MODEL$.createDatumWriter(SCHEMA$);
+  private static final org.apache.avro.io.DatumWriter<ResearchDataTransfer>
+    WRITER$ = (org.apache.avro.io.DatumWriter<ResearchDataTransfer>)MODEL$.createDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
     throws java.io.IOException {
@@ -437,8 +437,8 @@ public class StoreDataModel extends org.apache.avro.specific.SpecificRecordBase 
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumReader<StoreDataModel>
-    READER$ = (org.apache.avro.io.DatumReader<StoreDataModel>)MODEL$.createDatumReader(SCHEMA$);
+  private static final org.apache.avro.io.DatumReader<ResearchDataTransfer>
+    READER$ = (org.apache.avro.io.DatumReader<ResearchDataTransfer>)MODEL$.createDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
     throws java.io.IOException {
