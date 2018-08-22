@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 6644798344318986219L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"StoreServiceInfo\",\"namespace\":\"de.gerdiproject.store.data.model\",\"fields\":[{\"name\":\"UID\",\"type\":\"string\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"provider\",\"type\":\"string\"},{\"name\":\"timestamp\",\"type\":\"int\",\"logicalType\":\"timestamp-millis\"}]}");
+  private static final long serialVersionUID = -1472895559829125524L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"StoreServiceInfo\",\"namespace\":\"de.gerdiproject.store.data.model\",\"fields\":[{\"name\":\"UID\",\"type\":\"string\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"provider\",\"type\":\"string\"},{\"name\":\"frontend\",\"type\":\"string\"},{\"name\":\"timestamp\",\"type\":\"int\",\"logicalType\":\"timestamp-millis\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -54,6 +54,7 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
   @Deprecated public java.lang.CharSequence UID;
   @Deprecated public java.lang.CharSequence name;
   @Deprecated public java.lang.CharSequence provider;
+  @Deprecated public java.lang.CharSequence frontend;
   @Deprecated public int timestamp;
 
   /**
@@ -68,12 +69,14 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
    * @param UID The new value for UID
    * @param name The new value for name
    * @param provider The new value for provider
+   * @param frontend The new value for frontend
    * @param timestamp The new value for timestamp
    */
-  public StoreServiceInfo(java.lang.CharSequence UID, java.lang.CharSequence name, java.lang.CharSequence provider, java.lang.Integer timestamp) {
+  public StoreServiceInfo(java.lang.CharSequence UID, java.lang.CharSequence name, java.lang.CharSequence provider, java.lang.CharSequence frontend, java.lang.Integer timestamp) {
     this.UID = UID;
     this.name = name;
     this.provider = provider;
+    this.frontend = frontend;
     this.timestamp = timestamp;
   }
 
@@ -84,7 +87,8 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
     case 0: return UID;
     case 1: return name;
     case 2: return provider;
-    case 3: return timestamp;
+    case 3: return frontend;
+    case 4: return timestamp;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -96,7 +100,8 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
     case 0: UID = (java.lang.CharSequence)value$; break;
     case 1: name = (java.lang.CharSequence)value$; break;
     case 2: provider = (java.lang.CharSequence)value$; break;
-    case 3: timestamp = (java.lang.Integer)value$; break;
+    case 3: frontend = (java.lang.CharSequence)value$; break;
+    case 4: timestamp = (java.lang.Integer)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -150,6 +155,22 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
   }
 
   /**
+   * Gets the value of the 'frontend' field.
+   * @return The value of the 'frontend' field.
+   */
+  public java.lang.CharSequence getFrontend() {
+    return frontend;
+  }
+
+  /**
+   * Sets the value of the 'frontend' field.
+   * @param value the value to set.
+   */
+  public void setFrontend(java.lang.CharSequence value) {
+    this.frontend = value;
+  }
+
+  /**
    * Gets the value of the 'timestamp' field.
    * @return The value of the 'timestamp' field.
    */
@@ -200,6 +221,7 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
     private java.lang.CharSequence UID;
     private java.lang.CharSequence name;
     private java.lang.CharSequence provider;
+    private java.lang.CharSequence frontend;
     private int timestamp;
 
     /** Creates a new Builder */
@@ -225,9 +247,13 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
         this.provider = data().deepCopy(fields()[2].schema(), other.provider);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.timestamp)) {
-        this.timestamp = data().deepCopy(fields()[3].schema(), other.timestamp);
+      if (isValidValue(fields()[3], other.frontend)) {
+        this.frontend = data().deepCopy(fields()[3].schema(), other.frontend);
         fieldSetFlags()[3] = true;
+      }
+      if (isValidValue(fields()[4], other.timestamp)) {
+        this.timestamp = data().deepCopy(fields()[4].schema(), other.timestamp);
+        fieldSetFlags()[4] = true;
       }
     }
 
@@ -249,9 +275,13 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
         this.provider = data().deepCopy(fields()[2].schema(), other.provider);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.timestamp)) {
-        this.timestamp = data().deepCopy(fields()[3].schema(), other.timestamp);
+      if (isValidValue(fields()[3], other.frontend)) {
+        this.frontend = data().deepCopy(fields()[3].schema(), other.frontend);
         fieldSetFlags()[3] = true;
+      }
+      if (isValidValue(fields()[4], other.timestamp)) {
+        this.timestamp = data().deepCopy(fields()[4].schema(), other.timestamp);
+        fieldSetFlags()[4] = true;
       }
     }
 
@@ -373,6 +403,45 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
     }
 
     /**
+      * Gets the value of the 'frontend' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getFrontend() {
+      return frontend;
+    }
+
+    /**
+      * Sets the value of the 'frontend' field.
+      * @param value The value of 'frontend'.
+      * @return This builder.
+      */
+    public de.gerdiproject.store.data.model.StoreServiceInfo.Builder setFrontend(java.lang.CharSequence value) {
+      validate(fields()[3], value);
+      this.frontend = value;
+      fieldSetFlags()[3] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'frontend' field has been set.
+      * @return True if the 'frontend' field has been set, false otherwise.
+      */
+    public boolean hasFrontend() {
+      return fieldSetFlags()[3];
+    }
+
+
+    /**
+      * Clears the value of the 'frontend' field.
+      * @return This builder.
+      */
+    public de.gerdiproject.store.data.model.StoreServiceInfo.Builder clearFrontend() {
+      frontend = null;
+      fieldSetFlags()[3] = false;
+      return this;
+    }
+
+    /**
       * Gets the value of the 'timestamp' field.
       * @return The value.
       */
@@ -386,9 +455,9 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
       * @return This builder.
       */
     public de.gerdiproject.store.data.model.StoreServiceInfo.Builder setTimestamp(int value) {
-      validate(fields()[3], value);
+      validate(fields()[4], value);
       this.timestamp = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[4] = true;
       return this;
     }
 
@@ -397,7 +466,7 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
       * @return True if the 'timestamp' field has been set, false otherwise.
       */
     public boolean hasTimestamp() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[4];
     }
 
 
@@ -406,7 +475,7 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
       * @return This builder.
       */
     public de.gerdiproject.store.data.model.StoreServiceInfo.Builder clearTimestamp() {
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[4] = false;
       return this;
     }
 
@@ -418,7 +487,8 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
         record.UID = fieldSetFlags()[0] ? this.UID : (java.lang.CharSequence) defaultValue(fields()[0]);
         record.name = fieldSetFlags()[1] ? this.name : (java.lang.CharSequence) defaultValue(fields()[1]);
         record.provider = fieldSetFlags()[2] ? this.provider : (java.lang.CharSequence) defaultValue(fields()[2]);
-        record.timestamp = fieldSetFlags()[3] ? this.timestamp : (java.lang.Integer) defaultValue(fields()[3]);
+        record.frontend = fieldSetFlags()[3] ? this.frontend : (java.lang.CharSequence) defaultValue(fields()[3]);
+        record.timestamp = fieldSetFlags()[4] ? this.timestamp : (java.lang.Integer) defaultValue(fields()[4]);
         return record;
       } catch (java.lang.Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);
