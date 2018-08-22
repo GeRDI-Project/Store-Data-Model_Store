@@ -4,8 +4,6 @@
  "fields": [
         { "name": "UID", "type": "string" },
         { "name": "name", "type": "string" },
-        { "name": "publicKey", "type": "string" },
-        { "name": "provider", "type": "string" },
-        { "name": "credentialType", "type": "string" }
+        { "name": "provider", "type": "string" }
    ]
 }

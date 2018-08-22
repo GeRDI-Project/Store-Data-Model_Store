@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -5942726932799074806L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"StoreServiceInfo\",\"namespace\":\"de.gerdiproject.store.data.model\",\"fields\":[{\"name\":\"UID\",\"type\":\"string\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"publicKey\",\"type\":\"string\"},{\"name\":\"provider\",\"type\":\"string\"},{\"name\":\"credentialType\",\"type\":\"string\"}]}");
+  private static final long serialVersionUID = 3488564172358735399L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"StoreServiceInfo\",\"namespace\":\"de.gerdiproject.store.data.model\",\"fields\":[{\"name\":\"UID\",\"type\":\"string\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"provider\",\"type\":\"string\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -53,9 +53,7 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
 
   @Deprecated public java.lang.CharSequence UID;
   @Deprecated public java.lang.CharSequence name;
-  @Deprecated public java.lang.CharSequence publicKey;
   @Deprecated public java.lang.CharSequence provider;
-  @Deprecated public java.lang.CharSequence credentialType;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -68,16 +66,12 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
    * All-args constructor.
    * @param UID The new value for UID
    * @param name The new value for name
-   * @param publicKey The new value for publicKey
    * @param provider The new value for provider
-   * @param credentialType The new value for credentialType
    */
-  public StoreServiceInfo(java.lang.CharSequence UID, java.lang.CharSequence name, java.lang.CharSequence publicKey, java.lang.CharSequence provider, java.lang.CharSequence credentialType) {
+  public StoreServiceInfo(java.lang.CharSequence UID, java.lang.CharSequence name, java.lang.CharSequence provider) {
     this.UID = UID;
     this.name = name;
-    this.publicKey = publicKey;
     this.provider = provider;
-    this.credentialType = credentialType;
   }
 
   public org.apache.avro.Schema getSchema() { return SCHEMA$; }
@@ -86,9 +80,7 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
     switch (field$) {
     case 0: return UID;
     case 1: return name;
-    case 2: return publicKey;
-    case 3: return provider;
-    case 4: return credentialType;
+    case 2: return provider;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -99,9 +91,7 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
     switch (field$) {
     case 0: UID = (java.lang.CharSequence)value$; break;
     case 1: name = (java.lang.CharSequence)value$; break;
-    case 2: publicKey = (java.lang.CharSequence)value$; break;
-    case 3: provider = (java.lang.CharSequence)value$; break;
-    case 4: credentialType = (java.lang.CharSequence)value$; break;
+    case 2: provider = (java.lang.CharSequence)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -139,22 +129,6 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
   }
 
   /**
-   * Gets the value of the 'publicKey' field.
-   * @return The value of the 'publicKey' field.
-   */
-  public java.lang.CharSequence getPublicKey() {
-    return publicKey;
-  }
-
-  /**
-   * Sets the value of the 'publicKey' field.
-   * @param value the value to set.
-   */
-  public void setPublicKey(java.lang.CharSequence value) {
-    this.publicKey = value;
-  }
-
-  /**
    * Gets the value of the 'provider' field.
    * @return The value of the 'provider' field.
    */
@@ -168,22 +142,6 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
    */
   public void setProvider(java.lang.CharSequence value) {
     this.provider = value;
-  }
-
-  /**
-   * Gets the value of the 'credentialType' field.
-   * @return The value of the 'credentialType' field.
-   */
-  public java.lang.CharSequence getCredentialType() {
-    return credentialType;
-  }
-
-  /**
-   * Sets the value of the 'credentialType' field.
-   * @param value the value to set.
-   */
-  public void setCredentialType(java.lang.CharSequence value) {
-    this.credentialType = value;
   }
 
   /**
@@ -220,9 +178,7 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
 
     private java.lang.CharSequence UID;
     private java.lang.CharSequence name;
-    private java.lang.CharSequence publicKey;
     private java.lang.CharSequence provider;
-    private java.lang.CharSequence credentialType;
 
     /** Creates a new Builder */
     private Builder() {
@@ -243,17 +199,9 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
         this.name = data().deepCopy(fields()[1].schema(), other.name);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.publicKey)) {
-        this.publicKey = data().deepCopy(fields()[2].schema(), other.publicKey);
+      if (isValidValue(fields()[2], other.provider)) {
+        this.provider = data().deepCopy(fields()[2].schema(), other.provider);
         fieldSetFlags()[2] = true;
-      }
-      if (isValidValue(fields()[3], other.provider)) {
-        this.provider = data().deepCopy(fields()[3].schema(), other.provider);
-        fieldSetFlags()[3] = true;
-      }
-      if (isValidValue(fields()[4], other.credentialType)) {
-        this.credentialType = data().deepCopy(fields()[4].schema(), other.credentialType);
-        fieldSetFlags()[4] = true;
       }
     }
 
@@ -271,17 +219,9 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
         this.name = data().deepCopy(fields()[1].schema(), other.name);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.publicKey)) {
-        this.publicKey = data().deepCopy(fields()[2].schema(), other.publicKey);
+      if (isValidValue(fields()[2], other.provider)) {
+        this.provider = data().deepCopy(fields()[2].schema(), other.provider);
         fieldSetFlags()[2] = true;
-      }
-      if (isValidValue(fields()[3], other.provider)) {
-        this.provider = data().deepCopy(fields()[3].schema(), other.provider);
-        fieldSetFlags()[3] = true;
-      }
-      if (isValidValue(fields()[4], other.credentialType)) {
-        this.credentialType = data().deepCopy(fields()[4].schema(), other.credentialType);
-        fieldSetFlags()[4] = true;
       }
     }
 
@@ -364,45 +304,6 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
     }
 
     /**
-      * Gets the value of the 'publicKey' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getPublicKey() {
-      return publicKey;
-    }
-
-    /**
-      * Sets the value of the 'publicKey' field.
-      * @param value The value of 'publicKey'.
-      * @return This builder.
-      */
-    public de.gerdiproject.store.data.model.StoreServiceInfo.Builder setPublicKey(java.lang.CharSequence value) {
-      validate(fields()[2], value);
-      this.publicKey = value;
-      fieldSetFlags()[2] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'publicKey' field has been set.
-      * @return True if the 'publicKey' field has been set, false otherwise.
-      */
-    public boolean hasPublicKey() {
-      return fieldSetFlags()[2];
-    }
-
-
-    /**
-      * Clears the value of the 'publicKey' field.
-      * @return This builder.
-      */
-    public de.gerdiproject.store.data.model.StoreServiceInfo.Builder clearPublicKey() {
-      publicKey = null;
-      fieldSetFlags()[2] = false;
-      return this;
-    }
-
-    /**
       * Gets the value of the 'provider' field.
       * @return The value.
       */
@@ -416,9 +317,9 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
       * @return This builder.
       */
     public de.gerdiproject.store.data.model.StoreServiceInfo.Builder setProvider(java.lang.CharSequence value) {
-      validate(fields()[3], value);
+      validate(fields()[2], value);
       this.provider = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -427,7 +328,7 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
       * @return True if the 'provider' field has been set, false otherwise.
       */
     public boolean hasProvider() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[2];
     }
 
 
@@ -437,46 +338,7 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
       */
     public de.gerdiproject.store.data.model.StoreServiceInfo.Builder clearProvider() {
       provider = null;
-      fieldSetFlags()[3] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'credentialType' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getCredentialType() {
-      return credentialType;
-    }
-
-    /**
-      * Sets the value of the 'credentialType' field.
-      * @param value The value of 'credentialType'.
-      * @return This builder.
-      */
-    public de.gerdiproject.store.data.model.StoreServiceInfo.Builder setCredentialType(java.lang.CharSequence value) {
-      validate(fields()[4], value);
-      this.credentialType = value;
-      fieldSetFlags()[4] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'credentialType' field has been set.
-      * @return True if the 'credentialType' field has been set, false otherwise.
-      */
-    public boolean hasCredentialType() {
-      return fieldSetFlags()[4];
-    }
-
-
-    /**
-      * Clears the value of the 'credentialType' field.
-      * @return This builder.
-      */
-    public de.gerdiproject.store.data.model.StoreServiceInfo.Builder clearCredentialType() {
-      credentialType = null;
-      fieldSetFlags()[4] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -487,9 +349,7 @@ public class StoreServiceInfo extends org.apache.avro.specific.SpecificRecordBas
         StoreServiceInfo record = new StoreServiceInfo();
         record.UID = fieldSetFlags()[0] ? this.UID : (java.lang.CharSequence) defaultValue(fields()[0]);
         record.name = fieldSetFlags()[1] ? this.name : (java.lang.CharSequence) defaultValue(fields()[1]);
-        record.publicKey = fieldSetFlags()[2] ? this.publicKey : (java.lang.CharSequence) defaultValue(fields()[2]);
-        record.provider = fieldSetFlags()[3] ? this.provider : (java.lang.CharSequence) defaultValue(fields()[3]);
-        record.credentialType = fieldSetFlags()[4] ? this.credentialType : (java.lang.CharSequence) defaultValue(fields()[4]);
+        record.provider = fieldSetFlags()[2] ? this.provider : (java.lang.CharSequence) defaultValue(fields()[2]);
         return record;
       } catch (java.lang.Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);
